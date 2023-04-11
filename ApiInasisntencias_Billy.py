@@ -25,7 +25,6 @@ df = pd.read_json('records.json')
 
 df = pd.json_normalize(df.to_dict('records'), record_path=['Cursos','Inasistencias'], meta=['Primer_nombre', 'Segundo_nombre', 'Primer_apellido', 'Segundo_apellido', 'Numero_identificacion_estudiante', 'Sexo', 'Correo_electronico_personal', 'Celular', ['Cursos', 'Nombre_modulo'], ['Cursos', 'Nombre_docente'], ['Cursos', 'Cantidad_inasistencia']], errors='ignore')
 
-# df = df.drop(['Observaciones'], axis=1)
 
 
 df.to_csv('Inasistencias.csv', index=False, encoding='UTF-8-sig')
